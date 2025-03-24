@@ -1,12 +1,7 @@
-function validatePin(pin) {
-    const pinPattern = /^(?![A-Za-z])\d{3}\s?\d{3}(?![A-Za-z])$/;
-    if (pinPattern.test(pin)) {
-        console.log(`Valid PIN: ${pin}`);
-        return true;
-    } else {
-        console.error(`Invalid PIN: ${pin}`);
-        return false;
-    }
+function validateEmail_UC1(email) {
+    const pattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+    return pattern.test(email);
 }
 
-validatePin("400 088"); 
+console.log(validateEmail_UC1("abc@bridgelabz.co")); 
+console.log(validateEmail_UC1("abc@bridgelabz")); 
